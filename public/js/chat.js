@@ -50,12 +50,13 @@ form.addEventListener( 'submit', (event) => {
  });
 
 
-const socket = io({
+ const socket = io('https://globalsocketchat.netlify.app/', {
   auth: {
     token: 'ABC-123',
     name: username,
   },
 });
+
 
 socket.on('connect', () => {
   lblStatusOnline.classList.remove('hidden');
