@@ -1,8 +1,11 @@
+import io from 'socket.io-client'
+
 const username = localStorage.getItem('name');
 if (!username) {
   window.location.replace('/');
   throw new Error('Username is required');
 }
+
 
 //references HTML
 
@@ -50,7 +53,7 @@ form.addEventListener( 'submit', (event) => {
  });
 
 
- const socket = io('https://globalsocketchat.netlify.app/', {
+ const socket = io('https://globalsocketchat.netlify.app/', { //si no funciona sacar url
   auth: {
     token: 'ABC-123',
     name: username,
