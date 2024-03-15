@@ -1,4 +1,4 @@
-import io from 'socket.io-client'
+import io from 'https://cdn.jsdelivr.net/npm/socket.io-client@4.3.2/dist/socket.io.js'
 
 const username = localStorage.getItem('name');
 if (!username) {
